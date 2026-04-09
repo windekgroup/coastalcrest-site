@@ -55,3 +55,288 @@
 
 /* Minimal style for replaced success area so it doesn't jump */
 #contact-form { transition: all 220ms ease; }
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+
+.hero-content,
+.hero-wrap,
+.hero-item,
+.section-container,
+.contact-details,
+.footer-inner,
+.social-wrap ul,
+.footer-social ul {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 1064px) {
+	.full-height,
+	.hero-content {
+		height: auto;
+		min-height: calc(100vh - 90px);
+	}
+
+	.hero-wrap {
+		position: relative;
+		top: auto;
+		transform: none;
+		padding: 140px 0 80px;
+		display: flex;
+		align-items: flex-end;
+		min-height: calc(100vh - 90px);
+	}
+
+	.hero-item {
+		padding: 0;
+	}
+
+	.hero-wrap h2,
+	.intro-text h2 {
+		font-size: clamp(2.3rem, 6vw, 3.6rem) !important;
+		line-height: 1.12 !important;
+		letter-spacing: -0.04em;
+	}
+
+	.intro-text {
+		padding: 50px 0;
+	}
+
+	.section-container {
+		margin: 36px 0;
+	}
+
+	.serv-item {
+		margin-top: 56px;
+	}
+
+	.pr-tags span,
+	.pr-tags ul {
+		width: 100%;
+		float: left;
+		text-align: left;
+	}
+
+	.pr-tags span {
+		margin-bottom: 14px;
+	}
+
+	.pr-tags ul li {
+		margin-bottom: 10px;
+	}
+
+	.footer-inner {
+		padding: 70px 28px 50px;
+	}
+
+	.contact-details h4:before {
+		right: 0;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.container {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+	.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+	.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+	.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+	.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+	.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+	.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+	.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+	.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+	.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+	.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	header.main-header {
+		padding-left: 16px;
+	}
+
+	.logo-holder {
+		height: 70px;
+		padding-top: 22px;
+		max-width: calc(100% - 80px);
+	}
+
+	.logo-holder img {
+		max-width: 100%;
+		height: 24px !important;
+	}
+
+	.show-search,
+	.show-share-wrap {
+		display: none;
+	}
+
+	.nav-button-wrap {
+		width: 64px;
+		height: 70px;
+	}
+
+	.nav-holder {
+		width: min(320px, 100vw);
+		max-height: calc(100vh - 70px);
+		padding: 24px 20px;
+	}
+
+	.hero-wrap {
+		padding: 120px 0 64px;
+		min-height: calc(100vh - 70px);
+	}
+
+	.hero-wrap h2,
+	.intro-text h2,
+	.bold-title {
+		word-break: break-word;
+	}
+
+	.hero-wrap p {
+		font-size: 13px;
+		line-height: 1.7;
+		max-width: 36rem;
+	}
+
+	.btn.float-btn,
+	#submit {
+		width: 100%;
+		max-width: 320px;
+		text-align: center;
+	}
+
+	.intro-text .btn {
+		margin-bottom: 12px;
+	}
+
+	.contact-details h4 {
+		text-align: left;
+		font-size: 12px;
+		padding-top: 0;
+	}
+
+	.contact-details h4:before {
+		display: none;
+	}
+
+	.contact-details h4 span {
+		float: none;
+		display: block;
+		top: 0;
+		padding-right: 0;
+		margin-bottom: 8px;
+		font-size: 20px;
+	}
+
+	.contact-details ul li {
+		font-size: 12px;
+		letter-spacing: 0.06em;
+		word-break: break-word;
+	}
+
+	.contact-details ul li span {
+		float: none;
+		display: block;
+		padding-right: 0;
+		padding-bottom: 4px;
+	}
+
+	#contact-form input[type="text"],
+	#contact-form textarea {
+		height: 60px;
+		padding-left: 18px;
+	}
+
+	#contact-form textarea {
+		height: 160px;
+		padding: 22px 18px;
+	}
+
+	.footer-inner {
+		padding: 56px 20px 42px;
+	}
+
+	.footer-box ul li,
+	.policy-box p {
+		word-break: break-word;
+	}
+
+	.social-wrap ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.social-wrap ul li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.hero-wrap {
+		padding: 110px 0 56px;
+	}
+
+	.hero-wrap h2,
+	.intro-text h2 {
+		font-size: clamp(1.9rem, 10vw, 2.5rem) !important;
+		line-height: 1.14 !important;
+	}
+
+	.bold-title {
+		font-size: 1.8rem;
+		line-height: 1.3;
+		padding-bottom: 28px;
+	}
+
+	section {
+		padding: 72px 0;
+	}
+
+	.contact-details-wrap,
+	.section-container .box-item {
+		margin-top: 30px;
+	}
+
+	.footer-inner {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.success-modal {
+		width: min(94vw, 560px);
+	}
+}
