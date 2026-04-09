@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=index.html">
+    <title>Message Sent | Coastalcrest Energy Limited</title>
+    <style>
+        :root {
+            --bg: #08131f;
+            --bg-accent: #0f2435;
+            --card: rgba(10, 22, 35, 0.88);
+            --line: rgba(255, 255, 255, 0.12);
+            --text: #f4f7fb;
+            --muted: #a6b8c9;
+            --brand: #1fbf8f;
+            --brand-soft: rgba(31, 191, 143, 0.18);
+            --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(31, 191, 143, 0.18), transparent 32%),
+                radial-gradient(circle at bottom right, rgba(73, 149, 255, 0.18), transparent 28%),
+                linear-gradient(135deg, var(--bg), var(--bg-accent));
+            overflow: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: auto;
+            border-radius: 999px;
+            filter: blur(10px);
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 220px;
+            height: 220px;
+            top: 8%;
+            right: 10%;
+            background: var(--brand-soft);
+        }
+
+        body::after {
+            width: 280px;
+            height: 280px;
+            bottom: 10%;
+            left: 8%;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .success-modal {
+            width: min(92vw, 560px);
+            padding: 40px 34px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--card);
+            box-shadow: var(--shadow);
+            text-align: center;
+            backdrop-filter: blur(18px);
+            animation: lift-in 0.7s ease both;
+        }
+
+        .badge {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(180deg, rgba(31, 191, 143, 0.22), rgba(31, 191, 143, 0.08));
+            border: 1px solid rgba(31, 191, 143, 0.35);
+            box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.03);
+        }
+
+        .badge svg {
+            width: 36px;
+            height: 36px;
+            fill: none;
+            stroke: var(--brand);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+
+        p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+
+        .countdown {
+            margin-top: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--line);
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .countdown strong {
+            color: var(--brand);
+            min-width: 1ch;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 22px;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 2px;
+        }
+
+        @keyframes lift-in {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="success-modal" aria-live="polite">
+        <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+        </div>
+        <h1>Message sent successfully</h1>
+        <p>Thanks for reaching out to Coastalcrest Energy Limited. We have received your message and will get back to you shortly.</p>
+        <div class="countdown">Redirecting to the homepage in <strong id="countdown">3</strong> seconds</div>
+        <div><a class="home-link" href="index.html">Return now</a></div>
+    </main>
+
+    <script>
+        (function () {
+            var countdown = document.getElementById('countdown');
+            var seconds = 3;
+
+            window.setInterval(function () {
+                seconds -= 1;
+                if (seconds <= 0) {
+                    countdown.textContent = '0';
+                    window.location.href = 'index.html';
+                    return;
+                }
+                countdown.textContent = String(seconds);
+            }, 1000);
+        })();
+    </script>
+</body>
+</html>
